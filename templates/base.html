@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        :root {
+            --red: #ef4444;
+            --orange: #f97316;
+            --yellow: #eab308;
+            --blue: #3b82f6;
+            --green: #22c55e;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
