@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="tech-stack">
+                <i class="devicon-javascript-plain colored"></i>
+                <i class="devicon-nodejs-plain colored"></i>
+                <i class="devicon-express-original colored"></i>
+                <i class="devicon-html5-plain colored"></i>
+                <i class="devicon-css3-plain colored"></i>
+            </div>
+            <div class="icon-container">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+            </div>
+            <h1>Password Strength Checker</h1>
+            <p class="subtitle">Create a strong password to keep your account secure</p>
+            
+            <div class="password-input-container">
+                <input type="password" id="passwordInput" placeholder="Enter your password">
+                <button id="togglePassword" type="button">
+                    <svg id="eyeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="strength-meter">
+                <div class="strength-meter-fill"></div>
+            </div>
+
+            <div class="criteria-list">
+                <div class="criteria-item" data-criterion="hasMinLength">
+                    <span class="criteria-icon">✗</span>
+                    <span>At least 8 characters</span>
+                </div>
+                <div class="criteria-item" data-criterion="hasUpperCase">
+                    <span class="criteria-icon">✗</span>
+                    <span>Contains uppercase letter</span>
+                </div>
+                <div class="criteria-item" data-criterion="hasLowerCase">
+                    <span class="criteria-icon">✗</span>
+                    <span>Contains lowercase letter</span>
+                </div>
+                <div class="criteria-item" data-criterion="hasNumber">
+                    <span class="criteria-icon">✗</span>
+                    <span>Contains number</span>
+                </div>
+                <div class="criteria-item" data-criterion="hasSpecialChar">
+                    <span class="criteria-icon">✗</span>
+                    <span>Contains special character</span>
+                </div>
+            </div>
+
+            <div class="strength-text">Password Strength: Very Weak</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

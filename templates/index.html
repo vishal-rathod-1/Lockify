@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header">
+        <div class="icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+        </div>
+        <h1>Password Strength Checker</h1>
+        <p>Create a strong password to keep your account secure</p>
+    </div>
+
+    <form method="POST" class="password-form">
+        {{ form.csrf_token }}
+        <div class="password-input">
+            {{ form.password(placeholder="Enter your password", id="password") }}
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-meter-fill"></div>
+        </div>
+
+        <div class="criteria-list">
+            <div class="criteria-item">
+                <span class="criteria-icon">✗</span>
+                <span>At least 8 characters</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-icon">✗</span>
+                <span>Contains uppercase letter</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-icon">✗</span>
+                <span>Contains lowercase letter</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-icon">✗</span>
+                <span>Contains number</span>
+            </div>
+            <div class="criteria-item">
+                <span class="criteria-icon">✗</span>
+                <span>Contains special character</span>
+            </div>
+        </div>
+
+        <div class="strength-text">Password Strength: Very Weak</div>
+    </form>
+</div>
+{% endblock %}
