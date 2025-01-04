@@ -1,5 +1,7 @@
 # Lockify
 
+https://radiant-eclair-146377.netlify.app/
+
 A sleek, web-based password strength checker to evaluate and visualize the strength of your passwords.
 
 ---
